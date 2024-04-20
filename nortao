@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirect to WhatsApp</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #303235; /* Cor de fundo suave */
+      }
+
+      #whatsappButton {
+        background-color: #ffcc00; /* Amarelo suave */
+        color: #000000; /* Preto */
+        padding: 2.64px 4.75px; /* Preenchimento calculado para se ajustar à altura e largura da viewport */
+        font-size: 6vw; /* Tamanho da fonte relativo à largura da janela */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 95vw; /* Largura calculada para se ajustar à largura da viewport */
+      }
+
+      #whatsappButton:hover {
+        background-color: #ffee99; /* Amarelo mais claro no hover */
+      }
+    </style>
+  </head>
+  <body>
+    <button id="whatsappButton">FALAR COM O DISTRIBUIDOR</button>
+    <script>
+      document
+        .getElementById('whatsappButton')
+        .addEventListener('click', redirectToWhatsApp)
+
+      function redirectToWhatsApp() {
+        let whatsappURL = 'https://wa.me/+556799786691' // Substitua pelo seu link do WhatsApp
+        let newWindow = window.open(whatsappURL, '_blank')
+        newWindow.focus()
+      }
+    </script>
+  </body>
+</html>
